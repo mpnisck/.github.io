@@ -1,0 +1,229 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Pretendard";
+  background-image: url(../assets/background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#vaco {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+main {
+  min-width: 320px;
+  width: 50%;
+  z-index: 20;
+}
+
+main.fixed-height {
+  height: 85vh;
+  padding-top: 20px;
+}
+
+.signin {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin form {
+  position: relative;
+}
+
+.signin img {
+  width: 20px;
+  position: absolute;
+  right: -5px;
+  padding: 10px;
+  transition: all .3s linear;
+}
+
+.signin img:hover {
+  cursor: pointer;
+  width: 24px;
+}
+
+.signin input {
+  height: 2rem;
+  width: 200px;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #030303;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all .3s ease-out;
+}
+
+.signin input::placeholder {
+  color: #e8e8e8;
+}
+
+.signin input:focus::placeholder {
+  color: transparent;
+}
+
+.signin input:focus {
+  outline: none;
+  width: 240px;
+  border-bottom-color: #030303;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  opacity: 1;
+  transition: all .6s ease-out;
+}
+
+.transparent {
+  opacity: 0 !important;
+}
+
+.hide {
+  display: none;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.messages {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 10px;
+}
+
+.messages .right {
+  display: flex;
+  justify-content: end;
+}
+
+.message {
+  color: #ffffff;
+  padding: 10px;
+  margin: 15px 10px;
+  position: relative;
+  max-width: 160px;
+}
+
+.message .nickname {
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #030303;
+  padding: 5px 8px;
+  font-weight: bold;
+}
+
+.message p:first-of-type {
+  margin-bottom: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  line-height: 1.4rem;
+}
+
+.messages .right p:first-of-type {
+  background-color: #dddddd;
+  color: #030303;
+}
+
+.message p:last-of-type {
+  font-size: 12px;
+  text-align: right;
+}
+
+.message-input {
+  display: flex;
+  position: relative;
+}
+
+.message-input button {
+  background: none;
+  border: none;
+  padding: 10px 10px 10px 20px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  font-size: 1.2rem;
+  transition: all .5s ease-out;
+}
+
+.message-input img {
+  width: 20px;
+}
+
+.message-input button:hover {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.message-input input {
+  flex: 1;
+  width: calc(100% - 50px);
+  height: 1.5rem;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #02c7bb;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all .3s ease-out;
+  resize: none;
+}
+
+.message-input input::placeholder {
+  color: #e8e8e8;
+}
+
+.message-input input:focus::placeholder {
+  color: transparent;
+}
+
+.message-input input:focus {
+  outline: none;
+}
